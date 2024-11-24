@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Bank Branches</title>
+    <link th:href="@{/css/styles.css}" rel="stylesheet">
+</head>
+<body styl>
+    <h1 th:text="${bankName} + ' Branches'"></h1>
+    <table border="3">
+        <thead>
+            <tr border="1">
+                <th>Name</th>
+                <th>Address</th>
+                <th>Pincode</th>
+                <th>Phone Number</th>
+                <th>IFSC Code</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="branch : ${branches}">
+                <td th:text="${branch.name}"></td>
+                <td th:text="${branch.address}"></td>
+                <td th:text="${branch.pincode}"></td>
+                <td th:text="${branch.phoneNo}"></td>
+                <td th:text="${branch.ifscCode}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+ 
+ 
+
+ 
